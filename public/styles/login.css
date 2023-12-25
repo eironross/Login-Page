@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700;800&family=Poppins:wght@200;400;500&display=swap');
+
+:root {
+    --clr-main: #161A30;
+    --clr-accent: #31304D;
+    --clr--box: #B6BBC4;
+    --clr-text: #F0ECE5;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html {
+    height: 100%;
+} */
+/* https://wallpapercave.com/w/wp11135709 */
+
+body {
+    font-family: "Poppins", sans-serif; 
+}
+
+h1, p {
+    color: var(--clr-text)
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+        
+}
+
+
+.login-form {
+    width: 500px;
+    background-color: var(--clr-main);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    border: 2px solid black;
+    box-shadow: 0px 12px 5px black;
+    z-index: 1;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+
+}
+
+.input-icon {
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.form i {
+    position: absolute;
+    
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+
+.login-form h1 {
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    
+}
+
+.login-form .submit {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    width: 150px;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+#forgot-password {
+    text-align: right;
+    text-decoration: none;
+    font-size: 1rem;;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to left, black, transparent);
+}
+
+
+
+
+
+
+
+/* For Delete for visuals only */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/dashboard-styles.css" />
+    <title>FRECO | Dashboard</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <div class="logo">
+        <i class="bx bx-water"></i>
+        <span class="text-name">FRECO</span>
+      </div>
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bxs-dashboard"></i
+              ><span class="nav-text">Dashboard</span></a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bxs-report"></i
+              ><span class="nav-text">Reports</span></a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bx-line-chart"></i
+              ><span class="nav-text">Analytics</span></a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bxs-bell"></i
+              ><span class="nav-text">Notifications</span><span>27</span></a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bxs-bolt"></i
+              ><span class="nav-text">Outages</span></a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bxs-help-circle"></i
+              ><span class="nav-text">Help</span></a
+            >
+          </li>
+
+          <li class="nav-link">
+            <a href="#"
+              ><i class="bx bx-user-circle"></i
+              ><span class="nav-text">Account</span></a
+            >
+          </li>
+        </ul>
+
+        <form class="nav-link logout" action="/logout" method="POST">
+          <button type="submit"><i class="bx bx-log-out"></i>Logout</button>
+        </form>
+      </div>
+    </nav>
+    <div class="nav">
+      <div class="navbar">
+        <h1>Dashboard</h1>
+      </div>
+      <div class="content">
+        <div class="grid grid-one">
+          <div class="mon-container unit">
+            <h2>Unit 1</h2>
+            <p class="dispatch">230.5</p>
+          </div>
+          <div class="mon-container unit">
+            <h2>Unit 2</h2>
+            <p class="dispatch">180.6</p>
+          </div>
+          <div class="mon-container unit">
+            <h2>Current Price</h2>
+            <div class="dispatch">1618</div>
+          </div>
+        </div>
+        <div class="grid grid-two">
+          <div class="mon-container">
+            <!-- <div class="chart-container" style="position: relative; height:40vh; width:50vw"> -->
+              <canvas id="myChart"></canvas>
+          </div>
+         </div> 
+        <div class="grid grid-three">
+          <div class="mon-container">
+            <a class="view-report"href="#"><h3>View All</h3></a>
+            <table class="table-report" style="width:100%; height:500px">
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Permit Report</td>
+                <td>External</td>
+                <td><h3 class="status">Approved</h3></td>
+              </tr>
+              <tr>
+                <td>Weekly Report</td>
+                <td>Internal</td>
+                <td><h3 class="status">Pending</h3></td>
+              </tr>
+              <tr>
+                <td>Billing Report</td>
+                <td>Internal</td>
+                <td ><h3 class="status">Approved</h3></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    <script src="/scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- <script src="/scripts/charts.js"></script> -->
+    <script>
+      let ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+          datasets: [
+            {
+              label: "Sell Price",
+              data: [256,0,12141,123,5414,5432,513,5465,123,4564,213,456,4212,5465,123,1545,6531,321,3254,654,1231,54,25,478],
+              borderWidth: 1, 
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+    <!-- <script>
+      const ctx = document.getElementById("myChart");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script> -->
+  </body>
+</html>
